@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Günlük Planlayıcı</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <div id="clock"></div>
+    <div id="date"></div>
+  </div>
+
+  <h2>📝 Yapılacaklar Listesi</h2>
+
+  <form id="task-form">
+    <input type="time" id="task-time" required />
+    <input type="text" id="task-desc" placeholder="Görev açıklaması..." required />
+    <button type="submit">Ekle</button>
+  </form>
+
+  <ul id="task-list"></ul>
+
+  <button id="clear-all">Hepsini Sil</button>
+
+  <div id="confirm-box" class="hidden">
+    <p>Tüm görevleri silmek istediğine emin misin?</p>
+    <button id="confirm-yes">Evet</button>
+    <button id="confirm-no">Hayır</button>
+  </div>
+
+  <audio id="alarm-sound" src="alarm.mp3" preload="auto"></audio>
+
+  <button id="enable-sound">🔊 Sesi Etkinleştir</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
